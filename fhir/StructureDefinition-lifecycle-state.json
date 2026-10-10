@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ipspe-lifecycle-state",
+  "url": "https://example.org/ips-preservation-envelope/fhir/StructureDefinition/lifecycle-state",
+  "version": "0.5.0",
+  "name": "LifecycleState",
+  "title": "Issuer lifecycle state of a document reference",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "IPS Preservation Envelope Profile (unofficial draft)",
+  "description": "The lifecycle state the issuer's lifecycle events establish for the issuance this reference represents, where it does not contradict DocumentReference.status. Values: issued, replaced-for-update, replaced-for-correction. Never withdrawn: see the withdrawal modifier extension.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "DocumentReference"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Issuer lifecycle state of a document reference",
+        "definition": "The lifecycle state the issuer's lifecycle events establish for the issuance this reference represents, where it does not contradict DocumentReference.status. Values: issued, replaced-for-update, replaced-for-correction. Never withdrawn: see the withdrawal modifier extension.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://example.org/ips-preservation-envelope/fhir/StructureDefinition/lifecycle-state"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "short": "issued | replaced-for-update | replaced-for-correction"
+      }
+    ]
+  }
+}

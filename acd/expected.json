@@ -1,0 +1,75 @@
+{
+  "algorithm": "ACD-1",
+  "profileVersion": "0.5.0",
+  "note": "Inputs are the files in vectors/, used byte for byte. 'digest' is the lowercase hexadecimal SHA-256 of the canonical form; 'sameAs' names a vector with the same digest.",
+  "vectors": {
+    "ACD-01": {
+      "description": "Reviewed draft: a preserved-snapshot Bundle, pretty-printed; decimal 5.0, non-ASCII names, a tab, a quotation mark, a solidus and a character outside the Basic Multilingual Plane",
+      "input": "vectors/ACD-01.json",
+      "expect": "digest",
+      "digest": "c304d0a2c21ecd033573b9d33bdc6d594e84fc9d6978e758a6e5f38e33662ceb"
+    },
+    "ACD-02": {
+      "description": "ACD-01 minified, with members in a different order and non-ASCII characters and the solidus written as escape sequences",
+      "input": "vectors/ACD-02.json",
+      "expect": "digest",
+      "digest": "c304d0a2c21ecd033573b9d33bdc6d594e84fc9d6978e758a6e5f38e33662ceb",
+      "sameAs": "ACD-01"
+    },
+    "ACD-03": {
+      "description": "ACD-01 attested by a person: new Bundle id, identifier and timestamp, Composition.attester and a Practitioner entry referenced only by it",
+      "input": "vectors/ACD-03.json",
+      "expect": "digest",
+      "digest": "c304d0a2c21ecd033573b9d33bdc6d594e84fc9d6978e758a6e5f38e33662ceb",
+      "sameAs": "ACD-01"
+    },
+    "ACD-04": {
+      "description": "ACD-01 attested by the custodian organisation: its entry is also referenced by Composition.custodian and is kept",
+      "input": "vectors/ACD-04.json",
+      "expect": "digest",
+      "digest": "c304d0a2c21ecd033573b9d33bdc6d594e84fc9d6978e758a6e5f38e33662ceb",
+      "sameAs": "ACD-01"
+    },
+    "ACD-05": {
+      "description": "Variant draft whose author is a Practitioner",
+      "input": "vectors/ACD-05.json",
+      "expect": "digest",
+      "digest": "96d30eb99765eb6caa2fcb63d39091ee1ed2c3931ba8f5227914b1e608c4aa8d"
+    },
+    "ACD-06": {
+      "description": "ACD-05 attested by its author: the Practitioner entry is referenced elsewhere and is kept",
+      "input": "vectors/ACD-06.json",
+      "expect": "digest",
+      "digest": "96d30eb99765eb6caa2fcb63d39091ee1ed2c3931ba8f5227914b1e608c4aa8d",
+      "sameAs": "ACD-05"
+    },
+    "ACD-07": {
+      "description": "ACD-01 with the dose written 5 instead of 5.0: the number's lexical form is significant",
+      "input": "vectors/ACD-07.json",
+      "expect": "digest",
+      "digest": "d3eb311a7ced883fd47a5cca8d1e10e46ce202afa87c2489504aac75d308e05b"
+    },
+    "ACD-08": {
+      "description": "ACD-01 with the dose written 5.00",
+      "input": "vectors/ACD-08.json",
+      "expect": "digest",
+      "digest": "5dfc827417b252cab28cf0d4298f1236701d89c5d3fd8b7708966d098883a398"
+    },
+    "ACD-09": {
+      "description": "ACD-01 with a clinical change to the dosage text",
+      "input": "vectors/ACD-09.json",
+      "expect": "digest",
+      "digest": "57f41a990be0f2b8a857fe5dc7af9002993e178a1a4e8491764bf59888f36668"
+    },
+    "ACD-10": {
+      "description": "Duplicate member name: rejected",
+      "input": "vectors/ACD-10.json",
+      "expect": "rejected"
+    },
+    "ACD-11": {
+      "description": "Unpaired surrogate in a string: rejected",
+      "input": "vectors/ACD-11.json",
+      "expect": "rejected"
+    }
+  }
+}

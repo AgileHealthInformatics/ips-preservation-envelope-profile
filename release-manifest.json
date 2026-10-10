@@ -1,0 +1,44 @@
+{
+  "profile": "urn:oid:2.25.11064312502901710892401295388462879468",
+  "profileVersion": "0.5.0",
+  "files": {
+    "ips-preservation-envelope.respec.html": "0e2f8cfe2c1bb48b1b9a51ef875fb5c121ca91864a3991498d437d689f7c7590",
+    "index.html": "d73e7f3eefce4cbbf400e8f01c94c59f5e6b7d9e792fed1915bd239be6c5efa7",
+    "rules.json": "6b6a30a2658e51d26e2a800e036ec4e17d75563d2737849348a2d967de98fa70",
+    "dependencies.json": "8b226e3a18138a3da02b479456043b9e700ea277e1050a14accb313240df8a4f",
+    "static.css": "6c6fea1b3c3dce8228373bc05e8b528cd12184f613d1ab6b765bd1acf1745b7f",
+    "build.py": "3a9a531a84f1c7ad3211bbde28e95fd17a46cf9791c1fae88bc6683d7221adec",
+    "acd/README.md": "2363bced2e1bb7e21ab4e170dea1072937a8593541eb4dcbb29701fe1a0795c7",
+    "acd/acd.mjs": "891dabb855c37526e5b459c572fa81444c1674077a9c3e4fc9150429ac143d02",
+    "acd/acd.py": "823e25ed9faa32cf6576af5176880e9d57c1ebf590d2b099e24ff11a0642a72b",
+    "acd/expected.json": "2787798c12547546db159d62a3423d360ff93edacaf98e2f0d3371e4f93e0fc1",
+    "acd/vectors/ACD-01.json": "d3ababacb2f316ef1c2ece0cf3f2c19c97ffd3bf0a4186626a7203300e24815e",
+    "acd/vectors/ACD-02.json": "fe4be064a83783a4013b27ba867a0b5f47e7ef83ab8385d8fd762c25792f09f9",
+    "acd/vectors/ACD-03.json": "4616a7b4bdce9626e62de536792b965f4a25feb894ee83480dcbe9fc5a297e08",
+    "acd/vectors/ACD-04.json": "feefa5ea9e1305ab796e500d106f44afe0d07932510947a896fe16bd04f8e370",
+    "acd/vectors/ACD-05.json": "b09a708bb591647a10a559e39ee04afea34bf8739e9a7e00dbb530e23ca7a86b",
+    "acd/vectors/ACD-06.json": "2bd5420591064a8fdbe342c1d32e0617f4d027b731a84053282d37bce66f3418",
+    "acd/vectors/ACD-07.json": "57b16a7eb67230673bbf7ba3459d4b9a0a45e1ccd85bed84d0c0f63bc8db456a",
+    "acd/vectors/ACD-08.json": "3841a0ec26957061256d72bb751baf4d76894bf0e2ac3d92888ff49eeab05945",
+    "acd/vectors/ACD-09.json": "bf3dc06f7bf91cb4834ec1aa08f7a156f17a3d17368fa1668e5ca9564395a4a4",
+    "acd/vectors/ACD-10.json": "7122daaed3f5be7e381614e5b52c39ee151908b540cc5fa15904d3a104b49046",
+    "acd/vectors/ACD-11.json": "3ca4b8bc2d8c6b9b91bdd2df76b44e01a5e5487ccee1dd76edc7bd82236cbb12",
+    "fhir/StructureDefinition-lifecycle-state.json": "10b2665fce2351b283104b470dd14483045f7e215a065d3dae9a44b4d6d768bf",
+    "fhir/StructureDefinition-withdrawal.json": "464df5bf3177ce6df87a9cf27535520c5fb5e5b0314cbb9f02da39202faec275"
+  },
+  "tools": {
+    "respec": "37.4.1",
+    "chromium": "141.0.7390.37",
+    "python": "3.13.16",
+    "node": "v22.22.0"
+  },
+  "checks": {
+    "respec": "no errors or warnings",
+    "obligationLint": "passed",
+    "offline": "passed",
+    "accessibility": "basic checks passed",
+    "catalogueReDerivation": "passed",
+    "attestedContentDigest": "Python and JavaScript implementations agree on every vector",
+    "reproducible": "passed"
+  }
+}

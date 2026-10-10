@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ipspe-withdrawal",
+  "url": "https://example.org/ips-preservation-envelope/fhir/StructureDefinition/withdrawal",
+  "version": "0.5.0",
+  "name": "Withdrawal",
+  "title": "Withdrawn by the issuer",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "IPS Preservation Envelope Profile (unofficial draft)",
+  "description": "The issuer withdrew the document this reference represents, without a replacement. Present only on a withdrawn issuance.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "DocumentReference"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Withdrawn by the issuer",
+        "definition": "The issuer withdrew the document this reference represents, without a replacement. Present only on a withdrawn issuance.",
+        "max": "1",
+        "isModifier": true,
+        "isModifierReason": "MHD 4.2.4 allows DocumentReference.status to be only current or superseded, and FHIR R4 defines superseded as superseded by another reference. This extension states that no other reference supersedes this one and that the document was withdrawn, which changes the meaning of status; a consumer that ignored it would present a withdrawn document as replaced."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://example.org/ips-preservation-envelope/fhir/StructureDefinition/withdrawal"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "withdrawn",
+        "short": "withdrawn"
+      }
+    ]
+  }
+}

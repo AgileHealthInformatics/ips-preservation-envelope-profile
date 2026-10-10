@@ -1,0 +1,43 @@
+name: build
+
+# Rebuilds the publication from the ReSpec source, verifies it (obligation lint, offline and accessibility checks,
+# independent re-derivation of rules.json and dependencies.json), checks that a second build is byte-identical, and
+# fails if the committed generated files differ from the rebuilt ones (profile annex "Release artefacts").
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Pinned tools
+        run: |
+          npm pack respec@37.4.1 && tar xzf respec-37.4.1.tgz
+          pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Build, verify and check reproducibility
+        run: python build.py --respec package/builds/respec-w3c.js --check-reproducible
+      - name: Committed generated files are the build outputs
+        run: |
+          rm -rf package respec-*.tgz
+          git diff --exit-code -- index.html rules.json dependencies.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: publication-${{ github.sha }}
+          path: |
+            index.html
+            rules.json
+            dependencies.json
+            release-manifest.json

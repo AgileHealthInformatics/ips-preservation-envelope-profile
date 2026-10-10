@@ -1,0 +1,39 @@
+/* Self-contained stylesheet for the static rendition (replaces the W3C TR stylesheets). */
+:root{--bg:#fdfcf9;--fg:#1c1b19;--muted:#5d5850;--rule:#d9d3c7;--link:#1f4f86;--code:#f1ede4;--note:#2b4d73;
+  --note-bg:#e8eef6;--issue:#8a3b12;--issue-bg:#f8ebe2;--ex:#4a5a2a;--ex-bg:#eef2e4;--head:#7a1f1f}
+@media (prefers-color-scheme:dark){:root{--bg:#161514;--fg:#e9e4da;--muted:#a49d91;--rule:#36322d;--link:#8fb3dc;
+  --code:#24221f;--note:#9cbbe0;--note-bg:#1c2633;--issue:#e9a07a;--issue-bg:#33231b;--ex:#b7c98d;--ex-bg:#22281a;--head:#d07a70}}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 "Iowan Old Style","Charter","Palatino Linotype",Georgia,serif;
+  max-width:52rem;margin:0 auto;padding:2.5rem 1rem 4rem}
+a{color:var(--link)} a:visited{color:var(--link)}
+h1,h2,h3,h4{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.25;color:var(--fg)}
+h1#title{font-size:2.1rem;margin:.2rem 0 .3rem;color:var(--head)}
+h2#subtitle{font-size:1.15rem;font-weight:500;color:var(--muted);margin:0 0 1rem}
+h2{font-size:1.45rem;margin-top:2.6rem;border-bottom:1px solid var(--rule);padding-bottom:.25rem}
+h3{font-size:1.15rem;margin-top:1.9rem} h4{font-size:1rem}
+.head{border-bottom:2px solid var(--head);padding-bottom:1rem;margin-bottom:1.5rem}
+.head dl{font:14px/1.5 system-ui,sans-serif}
+.head dt{font-weight:600;margin-top:.4rem} .head dd{margin-left:1rem}
+.head details summary{cursor:pointer;font:14px system-ui,sans-serif;color:var(--muted)}
+.copyright{font:13px/1.5 system-ui,sans-serif;color:var(--muted)}
+#toc{font:14px/1.55 system-ui,sans-serif;border:1px solid var(--rule);border-radius:6px;padding:.4rem 1rem 1rem;margin:2rem 0}
+#toc ol{list-style:none;padding-left:1rem;margin:.2rem 0} #toc>ol{padding-left:0}
+#toc a{text-decoration:none} .secno{color:var(--muted);margin-right:.3em}
+code,pre,samp{font:13.5px/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+code{background:var(--code);padding:.05em .3em;border-radius:3px;overflow-wrap:anywhere}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:4px;overflow-x:auto}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font:14px/1.45 system-ui,sans-serif;display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.4rem .55rem;text-align:left;vertical-align:top}
+th{font-weight:600}
+.note,.issue,.example{padding:.6rem 1rem;margin:1.2rem 0;border-left:4px solid;border-radius:0 4px 4px 0}
+.note{border-color:var(--note);background:var(--note-bg)} .issue{border-color:var(--issue);background:var(--issue-bg)}
+.example{border-color:var(--ex);background:var(--ex-bg)}
+.note-title,.issue-title,.example-title,.marker{font:600 13px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.note-title{color:var(--note)} .issue-title{color:var(--issue)} .example-title,.marker{color:var(--ex)}
+dfn{font-style:normal;font-weight:600} em.rfc2119{font-style:normal;font-variant:small-caps;font-weight:600;letter-spacing:.03em}
+.self-link{display:none} figure{margin:1.5rem 0} figcaption{font:14px system-ui,sans-serif;color:var(--muted)}
+.informative>p:first-of-type em,.appendix.informative>p em{color:var(--muted)}
+#references dt{font-weight:600} #references dd{margin-bottom:.6rem}
+@media print{body{max-width:none;background:#fff;color:#000}#toc{page-break-after:always}}

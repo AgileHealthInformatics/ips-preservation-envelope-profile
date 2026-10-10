@@ -1,0 +1,100 @@
+{
+  "profile": "urn:oid:2.25.11064312502901710892401295388462879468",
+  "profileVersion": "0.5.0",
+  "dependencies": [
+    {
+      "key": "fhir",
+      "specification": "HL7 FHIR",
+      "version": "4.0.1",
+      "identifier": "hl7.fhir.r4.core#4.0.1",
+      "status": "Normative (R4)",
+      "notes": ""
+    },
+    {
+      "key": "ips",
+      "specification": "HL7 FHIR International Patient Summary IG",
+      "version": "2.0.1",
+      "identifier": "hl7.fhir.uv.ips#2.0.1",
+      "status": "STU 2",
+      "notes": "The IPS Bundle profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+    },
+    {
+      "key": "iti-tf",
+      "specification": "IHE ITI Technical Framework (XDS.b ITI-41/18/43, XCA ITI-38/39, XCPD ITI-55)",
+      "version": "Revision 20.2",
+      "identifier": "[IHE-ITI-TF]",
+      "status": "Final Text",
+      "notes": ""
+    },
+    {
+      "key": "xds-mu",
+      "specification": "IHE XDS Metadata Update supplement (ITI-57)",
+      "version": "Revision 1.14",
+      "identifier": "[IHE-XDS-MU]",
+      "status": "Trial Implementation",
+      "notes": "ITI-57 is not in the Final Text of ITI TF Volume 2; it is defined by this supplement."
+    },
+    {
+      "key": "mhd",
+      "specification": "IHE MHD",
+      "version": "4.2.4",
+      "identifier": "ihe.iti.mhd#4.2.4",
+      "status": "Trial Implementation",
+      "notes": "4.2.5-comment is ballot material and is not used."
+    },
+    {
+      "key": "sips",
+      "specification": "IHE sIPS",
+      "version": "1.0.0",
+      "identifier": "ihe.iti.sips#1.0.0",
+      "status": "Trial Implementation",
+      "notes": "Does not pin an IPS version (see 1.1.1 Recorded exceptions)."
+    },
+    {
+      "key": "formatcode",
+      "specification": "IHE FormatCode vocabulary",
+      "version": "1.5.0",
+      "identifier": "ihe.formatcode.fhir#1.5.0",
+      "status": "Trial Implementation",
+      "notes": "The version that MHD 4.2.4's range 1.5.x resolves to (exception E-2)."
+    },
+    {
+      "key": "pdfa",
+      "specification": "PDF/A-3, conformance level b",
+      "version": "ISO 19005-3:2012",
+      "identifier": "[ISO-19005-3] on [ISO-32000-1]",
+      "status": "International Standard",
+      "notes": ""
+    },
+    {
+      "key": "sha",
+      "specification": "SHA-256",
+      "version": "FIPS 180-4",
+      "identifier": "[FIPS-180-4]",
+      "status": "Standard",
+      "notes": ""
+    },
+    {
+      "key": "hl7-validator",
+      "specification": "HL7 FHIR validator",
+      "version": "7.0.1",
+      "identifier": "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.1/validator_cli.jar",
+      "status": "Tool",
+      "notes": "Run with -version 4.0.1 -ig hl7.fhir.uv.ips#2.0.1; record its output."
+    },
+    {
+      "key": "verapdf",
+      "specification": "veraPDF",
+      "version": "1.30.3",
+      "identifier": "veraPDF release line 1.30 [VERAPDF]",
+      "status": "Tool",
+      "notes": "Validation profile PDF/A-3B. Exception E-3."
+    }
+  ],
+  "statuses": [
+    "exact",
+    "permitted-alternative",
+    "unsupported-deviation"
+  ],
+  "permittedAlternatives": []
+}

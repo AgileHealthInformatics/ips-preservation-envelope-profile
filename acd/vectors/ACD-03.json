@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "acd-final-3",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:5b0c9a8e-0d4f-4c1b-8a2e-3f6a7b8c9d03"
+  },
+  "type": "document",
+  "timestamp": "2026-10-09T09:10:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e05",
+      "resource": {
+        "resourceType": "Composition",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e01"
+        },
+        "date": "2026-10-09T08:55:00Z",
+        "author": [
+          {
+            "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e02"
+          }
+        ],
+        "title": "Patient summary",
+        "custodian": {
+          "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e03"
+        },
+        "section": [
+          {
+            "title": "Medication summary",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ramipril 5.0 mg once daily</div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e04"
+              }
+            ]
+          }
+        ],
+        "attester": [
+          {
+            "mode": "legal",
+            "time": "2026-10-09T09:05:00Z",
+            "party": {
+              "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e06"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e01",
+      "resource": {
+        "resourceType": "Patient",
+        "name": [
+          {
+            "text": "Zoë Ångström-Øberg"
+          }
+        ],
+        "birthDate": "1961-03-04",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://example.org/synthetic",
+              "valueBoolean": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e02",
+      "resource": {
+        "resourceType": "Device",
+        "deviceName": [
+          {
+            "name": "Summary generator",
+            "type": "user-friendly-name"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e03",
+      "resource": {
+        "resourceType": "Organization",
+        "name": "Synthetic Health Organisation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e04",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "status": "active",
+        "subject": {
+          "reference": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e01"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA05"
+            }
+          ],
+          "text": "Ramipril"
+        },
+        "dosage": [
+          {
+            "text": "5.0 mg once daily",
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 5.0,
+                  "unit": "mg"
+                }
+              }
+            ],
+            "patientInstruction": "Take with water.\tAvoid \"salt substitutes\" 🧂 / see leaflet"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f6d1c2e-1b0a-4c8e-9f3d-2a5b6c7d8e06",
+      "resource": {
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "text": "Dr Sam Synthetic"
+          }
+        ]
+      }
+    }
+  ]
+}
